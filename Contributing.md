@@ -47,7 +47,9 @@ items, to avoid any duplication of effort.
 - It would be nice to have some more preset layouts.
 
 - In emacs cursor movement cancels incremental search, tmux should work the
-  same way.
+  same way. Also when repeating a search, the search term starts blank and the
+  old one is only reused if searching again (ie C-r C-r) without entering
+  anything.
 
 - ([#2205](https://github.com/tmux/tmux/issues/2205))In copy mode, should add
   incremental search with regex (new commands).
@@ -73,6 +75,8 @@ items, to avoid any duplication of effort.
   It would be better if commands were self-contained and did not depend on
   other commands and instead each worked on the grid, probably using a set of
   helper functions. A larger cleanup of copy mode is really in order.
+
+- Per line grid time tracking and use of it in copy mode and elsewhere?
 
 - ([#2354](https://github.com/tmux/tmux/issues/2354)) Copy mode styles for the
   word and line.
