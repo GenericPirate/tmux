@@ -37,6 +37,10 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#2346](https://github.com/tmux/tmux/issues/2346)) Add a flag to
+  kill-session to kill a session group, and perhaps rename-session to rename
+  one.
+
 - It is annoying that -t= is still needed for select-window on the status line
   when it is not needed for panes.
 
