@@ -3,6 +3,17 @@
 This file lists some useful configuration file snippets to control tmux
 behaviour.
 
+### Create new panes in the same working directory
+
+This changes the default key bindings to add the `-c` flag to specify the
+working directory:
+
+~~~~
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -hc "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+~~~~
+
 ### Prevent pane movement wrapping
 
 This stops the pane movement keys wrapping around at the top, bottom, left and
