@@ -64,6 +64,9 @@ items, to avoid any duplication of effort.
 
 ### Medium things
 
+- ([#2495](https://github.com/tmux/tmux/issues/2495)) Per-session window
+  options.
+
 - ([#2414](https://github.com/tmux/tmux/issues/2414)) Copy mode commands like
   select-word, end-of-line all stop at the screen edge for wrapped lines rather
   than the end of the line. It would be better if they all worked like emacs
