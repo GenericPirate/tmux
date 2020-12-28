@@ -67,6 +67,13 @@ items, to avoid any duplication of effort.
 - ([#2495](https://github.com/tmux/tmux/issues/2495)) Per-session window
   options.
 
+- ([#2499](https://github.com/tmux/tmux/issues/2499)) &
+  ([#2512](https://github.com/tmux/tmux/issues/2512)) Add a way for
+  command-prompt, choose-tree and similar to print choice to stdout. Options
+  are 1) to add flags to do it (like display-message -p) or 2) permit
+  display-message -p to work when used as the choice command. Both would
+  require the commands to block the client until done.
+
 - ([#2414](https://github.com/tmux/tmux/issues/2414)) Copy mode commands like
   select-word, end-of-line all stop at the screen edge for wrapped lines rather
   than the end of the line. It would be better if they all worked like emacs
