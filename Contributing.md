@@ -68,6 +68,13 @@ items, to avoid any duplication of effort.
 
 ### Medium things
 
+- ([#2537](https://github.com/tmux/tmux/issues/2537)) Copy mode should try to
+  let the terminal wrap naturally if possible when redrawing so that terminal
+  line copy works better. This could only happen when the terminal is the same
+  width as it was when copy mode was entered. Redrawing a region would be
+  difficult - have to redraw lines before in case it wraps? Maybe writing the
+  copy mode screen could use grid_reader?
+
 - ([#2495](https://github.com/tmux/tmux/issues/2495)) Per-session window
   options.
 
