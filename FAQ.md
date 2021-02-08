@@ -433,10 +433,10 @@ when a session attached, `update-environment` will cause `SSH_AUTH_SOCK` to be
 and
 [here](https://man.openbsd.org/OpenBSD-current/man1/tmux.1#update-environment__).
 
-In practice, the best thing to do is to set up *ssh-agent(1)* in a shell
-profile regardless of tmux. For example for a Bourne-style shell with something
-like this in `.profile`, `.kshrc`, `.bash_profile`, `.bashrc` or whichever is
-most appropriate:
+In practice, it is more reliable to set up *ssh-agent(1)* in a shell profile
+that is run for every shell regardless of tmux. For a Bourne-style shell like
+*ksh(1)* or *bash(1)*, something like this in `.profile`, `.kshrc`,
+`.bash_profile` or `.bashrc`:
 
 ~~~~
 [ ! -f ~/.ssh.agent ] && ssh-agent -s >~/.ssh.agent
