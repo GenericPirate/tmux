@@ -417,6 +417,36 @@ C-b : attach -d
 With 2.9 or later, setting the `window-size` option to `largest` will use the
 largest attached client rather than smallest.
 
+### How do I use *ssh-agent(1)* with tmux?
+
+*ssh-agent(1)* sets an environment variable (`SSH_AUTH_SOCK`) which needs to be
+present in every shell process.
+
+It is possible to make sure `SSH_AUTH_SOCK` is set before running tmux, then it
+will be in the global environment and will be set for every pane created in
+tmux. The `update-environment` option contains `SSH_AUTH_SOCK` by default so it
+will update `SSH_AUTH_SOCK` in the session environment when a session is
+attached or a new session is created. However, if `SSH_AUTH_SOCK` is *not* set
+when a session attached, `update-environment` will cause `SSH_AUTH_SOCK` to be
+*removed* from the environment and not set for new panes. See
+[here](https://man.openbsd.org/OpenBSD-current/man1/tmux.1#GLOBAL_AND_SESSION_ENVIRONMENT)
+and
+[here](https://man.openbsd.org/OpenBSD-current/man1/tmux.1#update-environment__).
+
+In practice, the best thing to do is to set up *ssh-agent(1)* in a shell
+profile regardless of tmux. For example for a Bourne-style shell with something
+like this in `.profile`, `.kshrc`, `.bash_profile`, `.bashrc` or whichever is
+most appropriate:
+
+~~~~
+[ ! -f ~/.ssh.agent ] && ssh-agent -s >~/.ssh.agent
+eval `cat ~/.ssh.agent` >/dev/null
+if ! kill -0 $SSH_AGENT_PID 2>/dev/null; then
+        ssh-agent -s >~/.ssh.agent
+        eval `cat ~/.ssh.agent` >/dev/null
+fi
+~~~~
+
 ### What is the passthrough escape sequence and how do I use it?
 
 tmux takes care not to send escape sequences to a terminal that it isn't going
