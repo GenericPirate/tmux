@@ -370,30 +370,7 @@ $ tmux -Lfoo -f/dev/null start\; show -gw
 
 ### How do I copy a selection from tmux to the system's clipboard?
 
-When running in *xterm(1)*, tmux can automatically send copied text to the
-clipboard. This is controlled by the `set-clipboard` option and also needs this
-X resource to be set:
-
-~~~~
-XTerm*disallowedWindowOps: 20,21,SetXprop
-~~~~
-
-For rxvt-unicode (urxvt), there is an unofficial Perl extension
-[here](http://anti.teamidiot.de/static/nei/*/Code/urxvt/).
-
-Otherwise a key binding for copy mode using *xclip(1)* (or *xsel(1)*) works:
-
-~~~~
-bind -Tcopy-mode C-y send -X copy-pipe "xclip -i >/dev/null"
-~~~~
-
-Or for inside and outside copy mode with the prefix key:
-
-~~~~
-bind C-y run -b "tmux save-buffer - | xclip -i"
-~~~~
-
-On OS X, look at the *pbcopy(1)* and *pbpaste(1)* commands.
+See [this page](https://github.com/tmux/tmux/wiki/Clipboard).
 
 ### Why do I see dots around a session when I attach to it?
 
