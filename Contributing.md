@@ -64,7 +64,7 @@ items, to avoid any duplication of effort.
 
 - ([#2484](https://github.com/tmux/tmux/issues/2484))Popups should not close on
   resize unless there is really no space for them, they should instead be moved
-  or resized to stay visible.
+  or resized to stay visible. Also a way to remove the border for popups.
 
 ### Medium things
 
