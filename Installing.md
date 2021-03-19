@@ -8,10 +8,12 @@ the documentation for the platform package management tools, for example:
 
 Platform|Install Command
 ---|---
+Arch Linux|`pacman -S tmux`
+Debian or Ubuntu|`apt install tmux`
 Fedora|`dnf install tmux`
 RHEL or CentOS|`yum install tmux`
-Debian or Ubuntu|`apt install tmux`
-Arch Linux|`pacman -S tmux`
+macOS (using Homebrew|`brew install tmux`
+macOS (using MacPorts)|`port install tmux`
 openSUSE|`zypper install tmux`
 
 Some thirdparty binary packages are available: [AppImage](Installing#appimage-package) and
