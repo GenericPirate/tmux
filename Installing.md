@@ -136,8 +136,8 @@ also autoconf and automake. Building is the same as from a tarball except first
 the configure script must be generated. To install into `/usr/local`:
 
 ~~~~
-tar -zxf tmux-*.tar.gz
-cd tmux-*/
+git clone https://github.com/tmux/tmux.git
+cd tmux
 sh autogen.sh
 ./configure
 make && sudo make install
