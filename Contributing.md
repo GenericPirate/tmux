@@ -41,6 +41,10 @@ items, to avoid any duplication of effort.
   kill-session to kill a session group, and perhaps rename-session to rename
   one.
 
+- ([#2671](https://github.com/tmux/tmux/issues/2671)) Add a `window-size
+  manual-or-smallest` which uses manual size only if there are no smaller
+  clients.
+
 - It is annoying that -t= is still needed for select-window on the status line
   when it is not needed for panes.
 
