@@ -167,6 +167,13 @@ set -s set-clipboard off
 Kitty does support OSC 52, but it has a bug where it appends to the clipboard
 each time text is copied rather than replacing it.
 
+This bug can be worked around by modifying the `kitty.conf` file to add
+`no-append`:
+
+~~~~
+clipboard_control write-primary write-clipboard no-append
+~~~~
+
 #### Terminal support - rxvt-unicode
 
 rxvt-unicode does not support OSC 52 natively. There is an unofficial Perl
