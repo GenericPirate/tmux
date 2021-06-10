@@ -37,6 +37,9 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#2601](https://github.com/tmux/tmux/issues/2601)) A way to handle duplicate
+  window targets (choose MRU?). Note sure if should be default or optional.
+
 - ([#2346](https://github.com/tmux/tmux/issues/2346)) Add a flag to
   kill-session to kill a session group, and perhaps rename-session to rename
   one.
