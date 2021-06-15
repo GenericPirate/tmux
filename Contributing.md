@@ -69,9 +69,21 @@ items, to avoid any duplication of effort.
   session notifications for sessions other than the attached one. Similarly
   for some window notifications.
 
-- ([#2484](https://github.com/tmux/tmux/issues/2484))Popups should not close on
-  resize unless there is really no space for them, they should instead be moved
-  or resized to stay visible. Also a way to remove the border for popups.
+- ([#2484](https://github.com/tmux/tmux/issues/2484))Popup improvements:
+
+  - They should not close on resize unless there is really no space for them,
+    they should instead be moved or resized to stay visible
+
+  - A way to remove the border for a popup.
+
+  - A menu to do things like paste into the popup. A key to open the menu would
+    let it handle key bindings also.
+
+  - `-e` flag to set environment for popup and `-c` for working directory.
+
+  - A way to refresh panes in the background of the popup client. Ultimately it
+    would be nice if this happened live but initially it could just be
+    user-triggered (or on a timer?).
 
 ### Medium things
 
