@@ -23,8 +23,6 @@ For support:
 
 * the [FAQ](FAQ);
 
-* the [tmux-users@googlegroups.com mailing list](mailto:tmux-users@googlegroups.com);
-
-* the [#tmux IRC channel on freenode](irc://irc.freenode.net/tmux).
+* the [tmux-users@googlegroups.com mailing list](mailto:tmux-users@googlegroups.com).
 
 Some notes on tmux development and ideas for contributions are [here](Contributing).

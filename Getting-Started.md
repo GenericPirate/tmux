@@ -75,8 +75,6 @@ Here are several places to find documentation and help about tmux:
 - [The FAQ](FAQ) has solutions to commonly asked questions, mostly about
   specific configuration issues.
 
-- The [#tmux IRC channel on freenode](irc://irc.freenode.net/tmux).
-
 - The [tmux-users@googlegroups.com mailing list](mailto:tmux-users@googlegroups.com).
 
 ### Basic concepts
