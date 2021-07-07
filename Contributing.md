@@ -65,14 +65,14 @@ items, to avoid any duplication of effort.
   old one is only reused if searching again (ie C-r C-r) without entering
   anything.
 
-- ([#2205](https://github.com/tmux/tmux/issues/2205))In copy mode, should add
+- ([#2205](https://github.com/tmux/tmux/issues/2205)) In copy mode, should add
   incremental search with regex (new commands).
 
 - When queueing notifications for control mode, there is no need to queue
   session notifications for sessions other than the attached one. Similarly
   for some window notifications.
 
-- ([#2484](https://github.com/tmux/tmux/issues/2484))Popup improvements:
+- ([#2484](https://github.com/tmux/tmux/issues/2484)) Popup improvements:
 
   - They should not close on resize unless there is really no space for them,
     they should instead be moved or resized to stay visible
@@ -240,7 +240,8 @@ items, to avoid any duplication of effort.
   history-limit works - would it be better as a global limit rather than per
   pane?
 
-- ([#2449](https://github.com/tmux/tmux/issues/2449))Link panes into multiple windows.
+- ([#2449](https://github.com/tmux/tmux/issues/2449)) Link panes into multiple
+  windows.
 
 - ([#44](https://github.com/tmux/tmux/issues/44)) &
   ([#1613](https://github.com/tmux/tmux/issues/1613)) Support for SIXEL.
