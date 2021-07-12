@@ -90,6 +90,10 @@ items, to avoid any duplication of effort.
 
 ### Medium things
 
+- A key table timeout and a key binding fired when timeout happens with the
+  previous key in a format or something, would allow binding C-b 1 0 to window
+  10 while keeping C-b 1 for window 1.
+
 - ([#2537](https://github.com/tmux/tmux/issues/2537)) Copy mode should try to
   let the terminal wrap naturally if possible when redrawing so that terminal
   line copy works better. This could only happen when the terminal is the same
