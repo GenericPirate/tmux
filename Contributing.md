@@ -72,7 +72,8 @@ items, to avoid any duplication of effort.
   session notifications for sessions other than the attached one. Similarly
   for some window notifications.
 
-- ([#2484](https://github.com/tmux/tmux/issues/2484)) Popup improvements:
+- ([#2484](https://github.com/tmux/tmux/issues/2484)) &
+  ([#2776](https://github.com/tmux/tmux/issues/2776)) Popup improvements:
 
   - They should not close on resize unless there is really no space for them,
     they should instead be moved or resized to stay visible
@@ -80,13 +81,21 @@ items, to avoid any duplication of effort.
   - A way to remove the border for a popup.
 
   - A menu to do things like paste into the popup. A key to open the menu would
-    let it handle key bindings also.
+    let it handle key bindings also. This is complicated to do with the
+    existing menu code because menus are overlays same as popups and there can
+    only be one, so either need to handle the menu in the popup code (and
+    forward to the menu code?) or a way to have multiple overlays.
 
   - `-e` flag to set environment for popup and `-c` for working directory.
 
   - A way to refresh panes in the background of the popup client. Ultimately it
     would be nice if this happened live but initially it could just be
     user-triggered (or on a timer?).
+
+  - Ability to set background and foreground colour for popups and menus, both
+    with OSC and arguments to display-popup and display-menu. This may mean
+    moving it from pane to screen (how will that affect panes when for example
+    they enter copy mode?).
 
 ### Medium things
 
