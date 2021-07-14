@@ -72,6 +72,8 @@ items, to avoid any duplication of effort.
   session notifications for sessions other than the attached one. Similarly
   for some window notifications.
 
+### Medium things
+
 - ([#2484](https://github.com/tmux/tmux/issues/2484)) &
   ([#2776](https://github.com/tmux/tmux/issues/2776)) Popup improvements:
 
@@ -96,8 +98,6 @@ items, to avoid any duplication of effort.
     with OSC and arguments to display-popup and display-menu. This may mean
     moving it from pane to screen (how will that affect panes when for example
     they enter copy mode?).
-
-### Medium things
 
 - A key table timeout and a key binding fired when timeout happens with the
   previous key in a format or something, would allow binding C-b 1 0 to window
