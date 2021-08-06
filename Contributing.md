@@ -74,6 +74,8 @@ items, to avoid any duplication of effort.
 
 ### Medium things
 
+- ([#2484](https://github.com/tmux/tmux/issues/2797)) Highlight incoming text.
+
 - ([#2484](https://github.com/tmux/tmux/issues/2484)) &
   ([#2776](https://github.com/tmux/tmux/issues/2776)) Popup improvements:
 

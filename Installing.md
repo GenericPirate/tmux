@@ -162,6 +162,14 @@ The libevent library or its headers are not installed. Make sure the
 appropriate packages are installed (some platforms split libraries from headers
 into a `-dev` or `-devel` package).
 
+#### configure says: `must give --enable-utf8proc or --disable-utf8proc`
+
+macOS's builtin UTF-8 support is very poor, so it is best to use the
+[utf8proc](https://juliastrings.github.io/utf8proc/) library if possible. Once
+it is installed, pass '--enable-utf8proc` to configure.
+
+To force tmux to build without utf8proc, use `--disable-utf8proc`.
+
 #### tmux won't run from `~/local`
 
 On Linux, make sure `LD_LIBRARY_PATH` is set, or try a static build instead
