@@ -166,7 +166,7 @@ into a `-dev` or `-devel` package).
 
 macOS's builtin UTF-8 support is very poor, so it is best to use the
 [utf8proc](https://juliastrings.github.io/utf8proc/) library if possible. Once
-it is installed, pass '--enable-utf8proc` to configure.
+it is installed, pass `--enable-utf8proc` to configure.
 
 To force tmux to build without utf8proc, use `--disable-utf8proc`.
 
