@@ -79,9 +79,6 @@ items, to avoid any duplication of effort.
 - ([#2484](https://github.com/tmux/tmux/issues/2484)) &
   ([#2776](https://github.com/tmux/tmux/issues/2776)) Popup improvements:
 
-  - They should not close on resize unless there is really no space for them,
-    they should instead be moved or resized to stay visible
-
   - A way to remove the border for a popup.
 
   - A menu to do things like paste into the popup. A key to open the menu would
@@ -91,10 +88,6 @@ items, to avoid any duplication of effort.
     forward to the menu code?) or a way to have multiple overlays.
 
   - `-e` flag to set environment for popup and `-c` for working directory.
-
-  - A way to refresh panes in the background of the popup client. Ultimately it
-    would be nice if this happened live but initially it could just be
-    user-triggered (or on a timer?).
 
   - Ability to set background and foreground colour for popups and menus, both
     with OSC and arguments to display-popup and display-menu. This may mean
