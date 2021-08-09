@@ -94,6 +94,11 @@ items, to avoid any duplication of effort.
     moving it from pane to screen (how will that affect panes when for example
     they enter copy mode?).
 
+  - A way to convert a popup into a pane (needs menu first I think).
+
+  - Allow focus to be put back to pane while leaving popup open, and back to
+    popup later. Problem: what if a pane is completely obscured by popup?
+
 - A key table timeout and a key binding fired when timeout happens with the
   previous key in a format or something, would allow binding C-b 1 0 to window
   10 while keeping C-b 1 for window 1.
@@ -131,8 +136,6 @@ items, to avoid any duplication of effort.
 
 - ([#2354](https://github.com/tmux/tmux/issues/2354)) Copy mode styles for the
   word and line.
-
-- A way to convert a popup into a pane (and vice versa?).
 
 - Extend the active-pane flag to windows so a client can have an independent
   current window. This can be similar to how it works for panes but is probably
