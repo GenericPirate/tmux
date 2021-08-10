@@ -72,6 +72,9 @@ items, to avoid any duplication of effort.
   session notifications for sessions other than the attached one. Similarly
   for some window notifications.
 
+- ([#2815](https://github.com/tmux/tmux/issues/2815)) Expose palette to user
+  (through a window pane array option?).
+
 ### Medium things
 
 - ([#2484](https://github.com/tmux/tmux/issues/2797)) Highlight incoming text.
