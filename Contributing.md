@@ -85,14 +85,14 @@ items, to avoid any duplication of effort.
   session notifications for sessions other than the attached one. Similarly
   for some window notifications.
 
+- Options for default cursor style and colour.
+
 ### Medium things
 
 - ([#2484](https://github.com/tmux/tmux/issues/2797)) Highlight incoming text.
 
 - ([#2484](https://github.com/tmux/tmux/issues/2484)) &
   ([#2776](https://github.com/tmux/tmux/issues/2776)) Popup improvements:
-
-  - A way to remove the border for a popup.
 
   - A menu to do things like paste into the popup. A key to open the menu would
     let it handle key bindings also. This is complicated to do with the
