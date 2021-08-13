@@ -61,9 +61,7 @@ items, to avoid any duplication of effort.
 - It would be nice to have some more preset layouts.
 
 - In emacs cursor movement cancels incremental search, tmux should work the
-  same way. Also when repeating a search, the search term starts blank and the
-  old one is only reused if searching again (ie C-r C-r) without entering
-  anything.
+  same way.
 
 - ([#2205](https://github.com/tmux/tmux/issues/2205)) In copy mode, should add
   incremental search with regex (new commands).
@@ -71,9 +69,6 @@ items, to avoid any duplication of effort.
 - When queueing notifications for control mode, there is no need to queue
   session notifications for sessions other than the attached one. Similarly
   for some window notifications.
-
-- ([#2815](https://github.com/tmux/tmux/issues/2815)) Expose palette to user
-  (through a window pane array option?).
 
 ### Medium things
 
@@ -91,11 +86,6 @@ items, to avoid any duplication of effort.
     forward to the menu code?) or a way to have multiple overlays.
 
   - `-e` flag to set environment for popup and `-c` for working directory.
-
-  - Ability to set background and foreground colour for popups and menus, both
-    with OSC and arguments to display-popup and display-menu. This may mean
-    moving it from pane to screen (how will that affect panes when for example
-    they enter copy mode?).
 
   - A way to convert a popup into a pane (needs menu first I think).
 
@@ -118,22 +108,9 @@ items, to avoid any duplication of effort.
 
 - ([#2499](https://github.com/tmux/tmux/issues/2499)) &
   ([#2512](https://github.com/tmux/tmux/issues/2512)) Add a way for
-  command-prompt, choose-tree and similar to print choice to stdout. Options
-  are 1) to add flags to do it (like display-message -p) or 2) permit
-  display-message -p to work when used as the choice command. Both would
-  require the commands to block the client until done.
-
-- ([#2414](https://github.com/tmux/tmux/issues/2414)) Copy mode commands like
-  select-word, end-of-line all stop at the screen edge for wrapped lines rather
-  than the end of the line. It would be better if they all worked like emacs
-  and used the real end of line all the time and ignored the screen edge. This
-  means at least end-of-line, start-of-line, next-word, next-word-end,
-  copy-end-of-line, previous-word, and probably more. This is particularly
-  annoying for select-word and select-line when using the mouse
-
-  It would be better if commands were self-contained and did not depend on
-  other commands and instead each worked on the grid, probably using a set of
-  helper functions. A larger cleanup of copy mode is really in order.
+  command-prompt, confirm-before and possibly choose-tree and similar to print
+  choice to stdout. Options are 1) to add flags to do it (like display-message
+  -p) or 2) permit display-message -p to work when used as the choice command.
 
 - Per line grid time tracking and use of it in copy mode and elsewhere?
 
@@ -145,13 +122,13 @@ items, to avoid any duplication of effort.
   more complicated. The idea would be to get rid of session groups.
 
 - Customize mode:
-  1) way to export option or tagged options to a file
-  2) `e` key like in buffer mode to edit option value or key command in an editor popup
-  3) way to add new user options
-  4) way to add new key bindings
-  5) 'd' on a header should restore entire key table to default
+  1) way to export option or tagged options to a file;
+  2) `e` key like in buffer mode to edit option value or key command in an editor popup;
+  3) way to add new user options;
+  4) way to add new key bindings;
+  5) 'd' on a header should restore entire key table to default.
 
-- unbind -d flag to restore key to default, with -a to restore all
+- unbind -d flag to restore key bindings to default, with -a to restore all.
 
 - In copy mode - should the bottom be the last used line? It can be annoying to
   have to move the cursor through a load of empty space. It might be better to
@@ -165,23 +142,7 @@ items, to avoid any duplication of effort.
   special targets like {left}; it could complete panes as well as windows.
   Probably lots more things.
 
-- At the moment, the optimization in screen-write.c is purely on lines
-  scrolled:
-  
-  - If there are multiple changes within a line they will both be written even
-    if they are on top of each other. We could trim text strings that overlap.
-  
-  - ECH, DCH and friends cause a flush when they could just remove the
-    characters from the write buffer?
-
-  - We could check the existing screen and drop characters that are unchanged.
-
-  But is it worth the cost? Would it make any difference to any applications?
-
 - Support DECSLRM margins within tmux itself.
-
-- Could the history be a ring buffer? Would it be better? It doesn't help us
-  with a scroll region or in the alternate screen.
 
 - list-keys should be able to show long commands with {} and newlines more
   nicely. Could store knowledge of command arguments in cmd_entry like a string
@@ -210,16 +171,10 @@ items, to avoid any duplication of effort.
   up with tagging. Maybe keys to break/join/move without leaving tree mode?
   Also dragging would be nice.
 
-- ([#1605](https://github.com/tmux/tmux/issues/1605)) Support for ZERO WIDTH
-  JOINER U+200D.
-
 - Marked positions in history. Could use the same prompt-detection escape
   sequences as iTerm2. Could be listed by capture-pane and also a menu to jump
   to marks in copy mode. ([#1042](https://github.com/tmux/tmux/issues/1042)) is
   related and also has some code to display a marker line.
-
-- A way to set a mark in copy mode and commands to jump back to it - "set-mark"
-  and "jump-to-mark" commands.
 
 - Make the commmand prompt able to take up multiple lines.
 
@@ -244,6 +199,10 @@ items, to avoid any duplication of effort.
   become closer to what is requested.
 
 ### Large things
+
+- Pass command arguments around as commands instead of as strings. Would need a
+  custom getopt and argv/argc type (or perhaps better to parse directly into
+  struct args).
 
 - Better layouts. For example it would be good if they were driven by hints
   rather than fixed positions and could be automatically reapplied after
