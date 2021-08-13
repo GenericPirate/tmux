@@ -35,6 +35,21 @@ brackets.
 It is worth getting in touch before starting work, particularly on larger
 items, to avoid any duplication of effort.
 
+### Documentation
+
+- The getting started guide on the wiki need to be updated for 3.2 and later:
+
+  * popups
+
+  * using marked panes with tree mode
+
+- The advanced use guide is unfinished and also needs these added for 3.2 and
+  later:
+
+  * %local
+
+  * terminal-features
+
 ### Small things
 
 - ([#2766](https://github.com/tmux/tmux/issues/2766)) A flag to select-window
