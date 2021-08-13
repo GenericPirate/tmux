@@ -94,15 +94,9 @@ items, to avoid any duplication of effort.
 - ([#2484](https://github.com/tmux/tmux/issues/2484)) &
   ([#2776](https://github.com/tmux/tmux/issues/2776)) Popup improvements:
 
-  - A menu to do things like paste into the popup. A key to open the menu would
-    let it handle key bindings also. This is complicated to do with the
-    existing menu code because menus are overlays same as popups and there can
-    only be one, so either need to handle the menu in the popup code (and
-    forward to the menu code?) or a way to have multiple overlays.
-
   - `-e` flag to set environment for popup and `-c` for working directory.
 
-  - A way to convert a popup into a pane (needs menu first I think).
+  - A way to convert a popup into a pane.
 
   - Allow focus to be put back to pane while leaving popup open, and back to
     popup later. Problem: what if a pane is completely obscured by popup?
