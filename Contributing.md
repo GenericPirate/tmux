@@ -213,11 +213,11 @@ items, to avoid any duplication of effort.
   struct arg {
       enum {
           ARG_STRING,
-	  ARG_ARGUMENTS
+          ARG_ARGUMENTS
       } type;
       union {
           char *string;
-	  struct arg *arguments;
+          struct arg *arguments;
       };
   };
   struct arg *argv;
