@@ -183,7 +183,7 @@ items, to avoid any duplication of effort.
   to marks in copy mode. ([#1042](https://github.com/tmux/tmux/issues/1042)) is
   related and also has some code to display a marker line.
 
-- Make the commmand prompt able to take up multiple lines.
+- Make the command prompt able to take up multiple lines.
 
 - ([#918](https://github.com/tmux/tmux/issues/918)) A way to specify how panes
   are merged when one is killed. Could be an option to kill-pane.
@@ -232,7 +232,7 @@ items, to avoid any duplication of effort.
   display-menu and run-shell -C mean the argument typing for getopt would need
   to be done in code by a callback rather than a string.
 
-  The ability to use a string instead of a {} commmand list may need to be
+  The ability to use a string instead of a {} command list may need to be
   preserved to allow for execution-time expansion - or perhaps dropping the
   ability to construct commands by expansion would be OK.
 
