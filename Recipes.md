@@ -69,14 +69,15 @@ C-DoubleClick on a word to open *emacs(1)* in a popup (handles `file:line`).
 Requires tmux 3.2 or later.
 
 ~~~~
+set -g word-separators ""
 bind -n C-DoubleClick1Pane if -F '#{m/r:^[^:]*:[0-9]+:,#{mouse_word}}' {
-	popup -w90% -h90% -E -d '#{pane_current_path}' '
-		emacs `echo #{mouse_word}|awk -F: "{print \"+\"\\$2,\\$1}"`
-	'
+        run -C { popup -w90% -h90% -E -d '#{pane_current_path}' '
+                emacs `echo #{mouse_word}|awk -F: "{print \"+\"\\$2,\\$1}"`
+        ' }
 } {
-	popup -w90% -h90% -E -d '#{pane_current_path}' '
-		emacs "#{mouse_word}"
-	'
+        run -C { popup -w90% -h90% -E -d '#{pane_current_path}' '
+                emacs "#{mouse_word}"
+        ' }
 }
 ~~~~
 
