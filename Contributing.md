@@ -89,6 +89,15 @@ items, to avoid any duplication of effort.
 
 ### Medium things
 
+- More use of commands as their own objects:
+
+  - Pretty print commands from list-keys etc.
+
+  - Allow user options to be commands and a way to invoke them without
+    expansion.
+
+  - Offer an alternative to %% and %%% for replaced commands via formats.
+
 - ([#2484](https://github.com/tmux/tmux/issues/2797)) Highlight incoming text.
 
 - ([#2484](https://github.com/tmux/tmux/issues/2484)) &
@@ -199,35 +208,6 @@ items, to avoid any duplication of effort.
   become closer to what is requested.
 
 ### Large things
-
-- Preserve {} as a command list rather than merging into a string. This would
-  need a custom argv/argc, something like:
-  ~~~~
-  struct arg {
-      enum {
-          ARG_STRING,
-          ARG_ARGUMENTS
-      } type;
-      union {
-          char *string;
-          struct arg *arguments;
-      };
-  };
-  struct arg *argv;
-  int argc;
-  ~~~~
-  Or perhaps using a TAILQ like cmd_parse_commands.
-
-  Then also a custom getopt where command arguments can be marked and this can
-  be parsed into struct arguments (which would need a similar custom argv to
-  either maintain it as an argv or - perhaps better - parse it into a cmdlist).
-
-  display-menu and run-shell -C mean the argument typing for getopt would need
-  to be done in code by a callback rather than a string.
-
-  The ability to use a string instead of a {} command list may need to be
-  preserved to allow for execution-time expansion - or perhaps dropping the
-  ability to construct commands by expansion would be OK.
 
 - Better layouts. For example it would be good if they were driven by hints
   rather than fixed positions and could be automatically reapplied after
