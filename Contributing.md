@@ -93,11 +93,12 @@ items, to avoid any duplication of effort.
 
   - Pretty print commands from list-keys etc.
 
-  - Store commands in options. Options would be better if they were not tied to
-    the table, so the options tree allows any option to be any type, and
-    set-option did the validation. Also if array indexes could be strings.
+  - Store commands in options (so thay can be pretty printed as well). Options
+    would be better if they were not tied to the table, so the options tree
+    allows any option to be any type, and set-option did the validation. Also
+    if array indexes could be strings.
 
-  - Something better than command-alias.
+  - Something better than command-alias?
 
 - ([#2484](https://github.com/tmux/tmux/issues/2797)) Highlight incoming text.
 
