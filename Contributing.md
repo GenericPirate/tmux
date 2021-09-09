@@ -93,10 +93,11 @@ items, to avoid any duplication of effort.
 
   - Pretty print commands from list-keys etc.
 
-  - Allow user options to be commands and a way to invoke them without
-    expansion.
+  - Store commands in options. Options would be better if they were not tied to
+    the table, so the options tree allows any option to be any type, and
+    set-option did the validation. Also if array indexes could be strings.
 
-  - Offer an alternative to %% and %%% for replaced commands via formats.
+  - Something better than command-alias.
 
 - ([#2484](https://github.com/tmux/tmux/issues/2797)) Highlight incoming text.
 
