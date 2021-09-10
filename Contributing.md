@@ -98,8 +98,6 @@ items, to avoid any duplication of effort.
     allows any option to be any type, and set-option did the validation. Also
     if array indexes could be strings.
 
-  - Something better than command-alias?
-
 - ([#2484](https://github.com/tmux/tmux/issues/2797)) Highlight incoming text.
 
 - ([#2484](https://github.com/tmux/tmux/issues/2484)) &
@@ -210,6 +208,34 @@ items, to avoid any duplication of effort.
   become closer to what is requested.
 
 ### Large things
+
+- More consistent command handling (at cost of breaking all configs);
+
+  - Commands given to other commands are all parsed immediately at parse time,
+    basically either they have to be {} or strings becomes treated like {}. So
+    if-shell and friends never get string arguments, only commands arguments.
+
+  - Parser tags string arguments as " or '.
+
+  - Before a command is executed, a callback is fired to get a format tree,
+    then each " argument has formats expanded (other stuff could be expanded at
+    the same time like \n which would simplify the parser).
+
+  - %% expansion would remain a second expansion step, it could also apply only to " arguments.
+
+  - All -F flags and inline format expansion become no-ops or removed.
+
+  - Options would need to support commands as native arguments for both user
+    options and hooks. This could be done without breaking any backwards
+    compatibility.
+
+  - command-alias is replaced with something else where the name and commands
+    are given separately so the commands can be parsed up front (more like a
+    function). An equivalent to the shell's argument accessor stuff like $1 and
+    "$@" would need to be expanded at execution time.
+
+  - I think some way to do execution type parsing would need to remain, an
+    equivalent of eval - maybe run -C stays like this.
 
 - Better layouts. For example it would be good if they were driven by hints
   rather than fixed positions and could be automatically reapplied after
