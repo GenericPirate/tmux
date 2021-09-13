@@ -449,6 +449,44 @@ The passthrough escape sequence is no longer necessary for changing the cursor
 colour or style as tmux now has its own support (see the `Cs`, `Cr`, `Ss` and
 `Se` capabilities).
 
+### How can I make .tmux.conf portable between tmux versions?
+
+For `set-option`, the `-q` flag suppresses warnings about unknown options, for
+example:
+
+~~~~
+set -gq mode-bg red
+~~~~
+
+Since tmux 2.3, the running server version is available in the `version` format
+variable. This can be used with `if-shell`, `if-shell -F` (since tmux 2.0) or
+`%if` (since tmux 2.4) to check for specific server versions.
+
+The `m` (since tmux 2.6) and `m/r` (since tmux 3.0) modifiers are most useful
+for this. For example to show a green status line if running a development
+build, blue if version 3.1 or above and red otherwise:
+
+~~~~
+%if #{m/r:^next-,#{version}}
+set -g status-style bg=green
+%elif #{&&:#{m/r:^[0-9]+\.[0-9]+$,#{version}},#{e|>=|f:#{version},3.1}}
+set -g status-style bg=blue
+%else
+set -g status-style bg=red
+%endif
+~~~~
+
+For versions older than tmux 2.3, `if-shell` and `tmux -V` must be used, for
+example:
+~~~~
+XXX
+~~~~
+
+Note that on OpenBSD version numbers the tmux version number tracks the OpenBSD
+version, see [this FAQ
+entry](https://github.com/tmux/tmux/wiki/FAQ#how-often-is-tmux-released-what-is-the-version-number-scheme)
+for information on tmux version numbers.
+
 ### Why don't XMODEM, YMODEM and ZMODEM work inside tmux?
 
 tmux is not a file transfer program and these protocols are more effort to
