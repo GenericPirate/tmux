@@ -476,11 +476,7 @@ set -g status-style bg=red
 %endif
 ~~~~
 
-For versions older than tmux 2.3, `if-shell` and `tmux -V` must be used, for
-example:
-~~~~
-XXX
-~~~~
+For versions older than tmux 2.3, `if-shell` and `tmux -V` must be used.
 
 Note that on OpenBSD version numbers the tmux version number tracks the OpenBSD
 version, see [this FAQ
