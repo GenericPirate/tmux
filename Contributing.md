@@ -100,13 +100,8 @@ items, to avoid any duplication of effort.
 
 - ([#2484](https://github.com/tmux/tmux/issues/2797)) Highlight incoming text.
 
-- ([#2484](https://github.com/tmux/tmux/issues/2484)) &
-  ([#2776](https://github.com/tmux/tmux/issues/2776)) Popup improvements:
-
-  - `-e` flag to set environment for popup and `-c` for working directory.
-
-  - Allow focus to be put back to pane while leaving popup open, and back to
-    popup later. Problem: what if a pane is completely obscured by popup?
+- Allow focus to be put back to pane while leaving popup open, and back to
+  popup later. Problem: what if a pane is completely obscured by popup?
 
 - A key table timeout and a key binding fired when timeout happens with the
   previous key in a format or something, would allow binding C-b 1 0 to window
