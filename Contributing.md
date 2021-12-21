@@ -52,6 +52,9 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#2953](https://github.com/tmux/tmux/issues/2953)) Keep menus open on
+  resize.
+
 - ([#2840](https://github.com/tmux/tmux/issues/2840)) A way to toggle line
   selection like `rectangle-toggle`.
 
