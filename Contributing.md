@@ -52,6 +52,12 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#2840](https://github.com/tmux/tmux/issues/2840)) A way to toggle line
+  selection like `rectangle-toggle`.
+
+- ([#2766](https://github.com/tmux/tmux/issues/2766)) A flag to select-window
+  to create the window, or to new-window to select.
+
 - ([#2601](https://github.com/tmux/tmux/issues/2601)) A way to handle duplicate
   window targets (choose MRU?). Note sure if should be default or optional.
 
