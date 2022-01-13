@@ -104,6 +104,9 @@ items, to avoid any duplication of effort.
     allows any option to be any type, and set-option did the validation. Also
     if array indexes could be strings.
 
+- ([#3036](https://github.com/tmux/tmux/issues/3036)) Could choose mode show
+  multiple columns?
+
 - ([#2484](https://github.com/tmux/tmux/issues/2797)) Highlight incoming text.
 
 - Allow focus to be put back to pane while leaving popup open, and back to
