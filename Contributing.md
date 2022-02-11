@@ -52,6 +52,12 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- It would be nice if a menu item could be prefixed by a + (like - for
+  disabled) and this mean the menu should not be closed when it is selected,
+  instead the item text (or all items) should be regenerated. This would mean
+  toggle items could be implemented by having the item toggle an option which
+  caused a change in its text.
+
 - ([#2953](https://github.com/tmux/tmux/issues/2953)) Keep menus open on
   resize.
 
