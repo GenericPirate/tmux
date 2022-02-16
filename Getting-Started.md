@@ -528,7 +528,7 @@ the numbers are swapped as well as the panes themselves.
 
 <p><img src="images/tmux_choose_tree1.png" align="right" width=376 height=243>
 tmux includes a mode where sessions, windows or panes can be chosen from a
-tree, this is called tree mode. It can be used browse sessions, windows and
+tree, this is called tree mode. It can be used to browse sessions, windows and
 panes; to change the attached session, the current window or active pane; to
 kill sessions, windows and panes; or apply a command to several at once by
 tagging them.</p>
