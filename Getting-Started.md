@@ -337,7 +337,7 @@ By default, the command prompt uses keys similar to *emacs(1)*; however, if the
 (such as `vi` or `vim` or `nvi`), then *vi(1)*-style keys are used instead.
 
 Multiple commands may be entered together at the command prompt by separating
-them with a colon (`;`). This is called a command sequence.
+them with a semicolon (`;`). This is called a command sequence.
 
 #### Attaching and detaching
 
