@@ -52,6 +52,9 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#3074](https://github.com/tmux/tmux/issues/3074)) Option to set the text
+  shown with display-panes in the top right of the pane.
+
 - It would be nice if a menu item could be prefixed by a + (like - for
   disabled) and this mean the menu should not be closed when it is selected,
   instead the item text (or all items) should be regenerated. This would mean
