@@ -534,7 +534,8 @@ variable.
 
    If tmux can find the pane, then it has the window as well, because each pane
 belongs to one window. If that window belongs to only one session, that gives
-the session, window and pane for the default target.
+the session and window for the default target (tmux will always use the active
+pane in the window it finds).
 
    If the window belongs to multiple sessions, then tmux picks the most recently
 used session. If the window is linked into the session multiple times (so it
