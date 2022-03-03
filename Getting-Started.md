@@ -615,7 +615,7 @@ Key|Function
 `x`|Detach selected client and try to kill the shell it was started from
 `X`|Detach tagged clients and try to kill the shells they were started from
 
-Other than using client mode, the `detach-client` flag has a `-a` flag to
+Other than using client mode, the `detach-client` command has a `-a` flag to
 detach all clients other than the attached client.
 
 #### Killing a session, window or pane
