@@ -52,8 +52,13 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#3061](https://github.com/tmux/tmux/issues/3061)) Format modifier to
+  specify server, session, window, pane option to allow user options with the
+  same name.
+
 - ([#3047](https://github.com/tmux/tmux/issues/3047)) Expand targets as
-  formats. Should this be done by default or require a prefix?
+  formats. Should this be done by default or require a prefix (maybe a leading
+  `+` or just look for `#{`)?
 
 - ([#3074](https://github.com/tmux/tmux/issues/3074)) Option to set the text
   shown with display-panes in the top right of the pane.
