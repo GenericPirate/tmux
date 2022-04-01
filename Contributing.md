@@ -110,6 +110,9 @@ items, to avoid any duplication of effort.
 
 - Options for default cursor style and colour.
 
+- ([#3139](https://github.com/tmux/tmux/issues/3139)) An option to change
+  cursor style and colour when in copy mode (or any mode?).
+
 ### Medium things
 
 - More use of commands as their own objects:
