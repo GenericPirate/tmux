@@ -52,6 +52,9 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#3159](https://github.com/tmux/tmux/issues/3159)) Key to centre cursor in
+  copy mode.
+
 - ([#3061](https://github.com/tmux/tmux/issues/3061)) Format modifier to
   specify server, session, window, pane option to allow user options with the
   same name.
