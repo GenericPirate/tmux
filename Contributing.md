@@ -52,6 +52,9 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#3114](https://github.com/tmux/tmux/issues/3114)) Allow prompt to appear on
+  a different status line when multiple are configured.
+
 - ([#3159](https://github.com/tmux/tmux/issues/3159)) Key to centre cursor in
   copy mode.
 
