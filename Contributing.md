@@ -121,6 +121,9 @@ items, to avoid any duplication of effort.
 
 ### Medium things
 
+- (#[3166](https://github.com/tmux/tmux/issues/3166)) A way to number matches
+  in copy mode to easily select them, and default keys to number useful stuff.
+
 - More use of commands as their own objects:
 
   - Pretty print commands from list-keys etc.
