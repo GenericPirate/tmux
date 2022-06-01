@@ -52,6 +52,10 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#2854](https://github.com/tmux/tmux/issues/2854)) Add a `monitor-input`
+  option like `monitor-activity` but that only fires when the pane has not seen
+  any user input, not all types of activity.
+
 - ([#3114](https://github.com/tmux/tmux/issues/3114)) Allow prompt to appear on
   a different status line when multiple are configured.
 
