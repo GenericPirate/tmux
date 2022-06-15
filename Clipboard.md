@@ -259,7 +259,7 @@ The available tools are:
 - On Linux and *BSD, there are the *xsel(1)* and *xclip(1)* tools, usually
   available as packages.
 
-- OS X has a builtin tool called *pbcopy(1)*.
+- macOS has a builtin tool called *pbcopy(1)*.
 
 These tools talk to the *X(7)* server (or equivalent) directly so without
 additional configuration they only work on the local computer.
