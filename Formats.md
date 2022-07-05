@@ -34,7 +34,7 @@ Formats are also documented in the manual
 variables.
 
 Note that some of these features are only available in tmux 3.1 and later (most
-notably: padding and multiple `s` modifiers.
+notably: padding and multiple `s` modifiers).
 
 ### Basic use
 
