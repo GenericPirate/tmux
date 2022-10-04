@@ -125,6 +125,9 @@ items, to avoid any duplication of effort.
 
 ### Medium things
 
+- (#[3258](https://github.com/tmux/tmux/issues/3258)) Server-wide list of last
+  used panes (and windows?) and mode to choose.
+
 - (#[3166](https://github.com/tmux/tmux/issues/3166)) A way to number matches
   in copy mode to easily select them, and default keys to number useful stuff.
 
