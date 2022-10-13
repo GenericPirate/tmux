@@ -150,7 +150,8 @@ In summary:
 * Windows are linked to one or more sessions.
 * Each session has a list of windows, each with an index.
 * One of the windows in a session is the current window.
-* Sessions are attached to zero or more clients.
+* Sessions are attached to one or more clients, or are detached (attached to no
+  clients).
 * Each client is attached to one session.
 
 #### Summary of terms
