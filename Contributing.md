@@ -52,6 +52,10 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#3343](https://github.com/tmux/tmux/issues/3343)) Extend
+  `detach-on-destroy` to allow selecting which remaining session becomes
+  attached.
+
 - ([#2854](https://github.com/tmux/tmux/issues/2854)) Add a `monitor-input`
   option like `monitor-activity` but that only fires when the pane has not seen
   any user input, not all types of activity.
