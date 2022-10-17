@@ -129,6 +129,9 @@ items, to avoid any duplication of effort.
 
 ### Medium things
 
+- (#[3342](https://github.com/tmux/tmux/issues/3242)) Ability to synchronize
+  the scrolling of two panes in copy mode.
+
 - (#[3258](https://github.com/tmux/tmux/issues/3258)) Server-wide list of last
   used panes (and windows?) and mode to choose.
 
