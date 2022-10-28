@@ -129,6 +129,15 @@ items, to avoid any duplication of effort.
 
 ### Medium things
 
+- Preserve tabs for later use by copy mode. Probably the best way to do this
+  would be to store them as an extended cell with a tab flag and the tab width
+  instead of the UTF-8 character index. On output this can the be translated
+  into spaces or a cursor movement (or left as tab for copy mode/capture-pane).
+  That way the padding cell handling is the same as for wide characters - it
+  would just need to be checked for assumptions about the maximum width being
+  two. If there is existing content under the tab then the tab should probably
+  not be stored and just treated as cursor movement.
+
 - (#[3342](https://github.com/tmux/tmux/issues/3242)) Ability to synchronize
   the scrolling of two panes in copy mode.
 
