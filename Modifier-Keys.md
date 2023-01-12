@@ -110,7 +110,7 @@ key or part of a longer sequence. It does this using a timer:
 
 This is why there can be a delay between pressing `Escape` and tmux passing the
 key on to an application inside. The length of the timer is controlled by the
-`escape-time` option, the default is 5000 milliseconds (half a second).
+`escape-time` option, the default is 500 milliseconds (half a second).
 
 ### Common function keys
 
