@@ -52,6 +52,9 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#3466](https://github.com/tmux/tmux/issues/3466)) Accept ANSI colour and
+  attribute sequences for styles where appropriate.
+
 - ([#3343](https://github.com/tmux/tmux/issues/3343)) Extend
   `detach-on-destroy` to allow selecting which remaining session becomes
   attached.
