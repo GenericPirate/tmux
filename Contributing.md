@@ -52,6 +52,9 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
+- ([#3488])https://github.com/tmux/tmux/issues/3488)) Allow entering and
+  scrolling in copy mode when read only.
+
 - ([#3466](https://github.com/tmux/tmux/issues/3466)) Accept ANSI colour and
   attribute sequences for styles where appropriate.
 
@@ -131,6 +134,12 @@ items, to avoid any duplication of effort.
   cursor style and colour when in copy mode (or any mode?).
 
 ### Medium things
+
+- ([#3655](https://github.com/tmux/tmux/issues/3655)) Ability to change popup
+  styles after it is open.
+
+- ([#3503](https://github.com/tmux/tmux/issues/3503)) Move panes or windows by
+  dragging with mouse.
 
 - Preserve tabs for later use by copy mode. Probably the best way to do this
   would be to store them as an extended cell with a tab flag and the tab width
