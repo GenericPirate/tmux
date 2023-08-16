@@ -52,7 +52,7 @@ items, to avoid any duplication of effort.
 
 ### Small things
 
-- ([#3488])https://github.com/tmux/tmux/issues/3488)) Allow entering and
+- ([#3488](https://github.com/tmux/tmux/issues/3488)) Allow entering and
   scrolling in copy mode when read only.
 
 - ([#3466](https://github.com/tmux/tmux/issues/3466)) Accept ANSI colour and
