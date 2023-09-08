@@ -58,10 +58,6 @@ items, to avoid any duplication of effort.
 - ([#3466](https://github.com/tmux/tmux/issues/3466)) Accept ANSI colour and
   attribute sequences for styles where appropriate.
 
-- ([#3343](https://github.com/tmux/tmux/issues/3343)) Extend
-  `detach-on-destroy` to allow selecting which remaining session becomes
-  attached.
-
 - ([#2854](https://github.com/tmux/tmux/issues/2854)) Add a `monitor-input`
   option like `monitor-activity` but that only fires when the pane has not seen
   any user input, not all types of activity.
@@ -127,8 +123,6 @@ items, to avoid any duplication of effort.
 - When queueing notifications for control mode, there is no need to queue
   session notifications for sessions other than the attached one. Similarly
   for some window notifications.
-
-- Options for default cursor style and colour.
 
 - ([#3139](https://github.com/tmux/tmux/issues/3139)) An option to change
   cursor style and colour when in copy mode (or any mode?).
