@@ -12,7 +12,7 @@ Arch Linux|`pacman -S tmux`
 Debian or Ubuntu|`apt install tmux`
 Fedora|`dnf install tmux`
 RHEL or CentOS|`yum install tmux`
-macOS (using Homebrew|`brew install tmux`
+macOS (using Homebrew)|`brew install tmux`
 macOS (using MacPorts)|`port install tmux`
 openSUSE|`zypper install tmux`
 
