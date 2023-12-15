@@ -269,6 +269,8 @@ items, to avoid any duplication of effort.
   move to the parent cell and resize it if this would allow the pane to
   become closer to what is requested.
 
+- ([#3753](https://github.com/tmux/tmux/issues/3753)) Improve SIXEL placeholders.
+
 ### Large things
 
 - More consistent command handling (at cost of breaking all configs);
