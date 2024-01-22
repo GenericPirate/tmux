@@ -449,6 +449,9 @@ The passthrough escape sequence is no longer necessary for changing the cursor
 colour or style as tmux now has its own support (see the `Cs`, `Cr`, `Ss` and
 `Se` capabilities).
 
+As of tmux 3.3, the `allow-passthrough` option must be set to `on` or `all` for
+the passthrough sequence to work.
+
 ### How can I make .tmux.conf portable between tmux versions?
 
 For `set-option`, the `-q` flag suppresses warnings about unknown options, for
