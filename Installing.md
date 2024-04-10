@@ -191,7 +191,7 @@ Instructions and scripts on building an AppImage package for tmux are available
 AppImage packages are also available
 [here](https://github.com/nelsonenzo/tmux-appimage/releases).
 
-### Docker
+### Docker script
 
 A [Docker](https://www.docker.com/) install script is available
 [here](https://github.com/ferryman0608/Dockerfile-tmux).
