@@ -38,6 +38,25 @@ bind -n WheelUpPane if -Ft= "#{mouse_any_flag}" "send -M" "send Up"
 bind -n WheelDownPane if -Ft= "#{mouse_any_flag}" "send -M" "send Down"
 ~~~~
 
+An alternative is to only send the keys when in the alternate screen:
+
+~~~~
+bind -n WheelUpPane {
+	if -F '#{||:#{pane_in_mode},#{mouse_any_flag}}' {
+		send -M
+	} {
+		if -F '#{alternate_on}' { send-keys -N 3 Up } { copy-mode -e }
+	}
+}
+bind -n WheelDownPane {
+	if -F '#{||:#{pane_in_mode},#{mouse_any_flag}}' {
+		send -M
+	} {
+		if -F '#{alternate_on}' { send-keys -N 3 Down }
+	}
+}
+~~~~
+
 ### Make `C-b w` binding only show the one session
 
 This makes the `C-b w` tree mode binding only show windows in the attached
