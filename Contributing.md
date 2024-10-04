@@ -127,6 +127,14 @@ items, to avoid any duplication of effort.
 - ([#3139](https://github.com/tmux/tmux/issues/3139)) An option to change
   cursor style and colour when in copy mode (or any mode?).
 
+- In copy mode, refresh (r) will update the content but not move the scroll
+  position, so the text appears to jump. It would be better to also move the
+  position so there was no apparent movement.
+
+- A toggle in copy mode to automatically refresh, either when new output is
+  added - with some sort of time limit, say at most once a second - or if that
+  is tricky, just once a second.
+
 ### Medium things
 
 - ([#3655](https://github.com/tmux/tmux/issues/3655)) Ability to change popup
