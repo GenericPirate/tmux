@@ -6,8 +6,8 @@ tmux is a terminal multiplexer. It lets you switch easily between several
 programs in one terminal, detach them (they keep running in the background) and
 reattach them to a different terminal.
 
-**Download [tmux 3.5 here](https://github.com/tmux/tmux/releases/download/3.5/tmux-3.5.tar.gz)**
-([changes in this version](https://raw.githubusercontent.com/tmux/tmux/3.5/CHANGES)).
+**Download [tmux 3.5a here](https://github.com/tmux/tmux/releases/download/3.5a/tmux-3.5a.tar.gz)**
+([changes in this version](https://raw.githubusercontent.com/tmux/tmux/3.5a/CHANGES)).
 
 See:
 
