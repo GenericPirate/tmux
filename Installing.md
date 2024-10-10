@@ -68,7 +68,7 @@ install system-wide into directories under `/opt` or into `/usr/local`,
 substitute the required path for for `$HOME/local` in each case and run `make
 install` as root (for example with sudo: `make && sudo make install`).
 
-For libevent:
+#### For libevent:
 
 ~~~~
 tar -zxf libevent-*.tar.gz
@@ -77,15 +77,25 @@ cd libevent-*/
 make && make install
 ~~~~
 
-For ncurses:
+#### For ncurses:
 
 ~~~~
 tar -zxf ncurses-*.tar.gz
 cd ncurses-*/
-./configure --prefix=$HOME/local --with-shared --with-termlib --enable-pc-files --with-pkg-config-libdir=$HOME/local/lib/pkgconfig
+./configure --prefix=$HOME/local --with-shared --with-termlib --with-versioned-syms --enable-pc-files --with-pkg-config-libdir=$HOME/local/lib/pkgconfig
 make && make install
 ~~~~
 
+The `--with-versioned-syms` is required when building ncurses, to avoid missing version information warnings.
+Such as the following:
+~~~~
+awk: /home/USER/local/lib/libtinfo.so.6: no version information available (required by /lib/x86_64-linux-gnu/libreadline.so.8)
+...
+bash: /home/USER/local/lib/libtinfo.so.6: no version information available (required by bash)
+...
+~~~~
+
+#### For tmux:
 Then the tmux configure script needs to be pointed to the local libraries
 using `PKG_CONFIG_PATH`:
 
